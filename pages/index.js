@@ -2,6 +2,11 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
+//importing link
+import Link from 'next/link';
+import ImgCard from '../comps/ImgCard';
+import Navbar from '../comps/Navbar';
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -11,9 +16,27 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      {/* Linking boiler.js and about.js into index */}
+      <Link href="/boiler">Go to Boiler</Link>
+      <Link href="/about">Go to About</Link>
+      <ImgCard 
+        bg="#FDE8CA"
+        tcl="#DAD">
+          <h3>Hi Im children</h3>
+          Yay
+          <hr />
+          WooHoo!
+        </ImgCard>
+      
+      <ImgCard 
+        img="http://placekitten.com/300/300"
+        comment="This is a cat"
+      />
+      <Navbar />
+
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to <a href="https://nextjs.org">My First App</a>
         </h1>
 
         <p className={styles.description}>
@@ -21,7 +44,7 @@ export default function Home() {
           <code className={styles.code}>pages/index.js</code>
         </p>
 
-        <div className={styles.grid}>
+        {/* <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
             <h2>Documentation &rarr;</h2>
             <p>Find in-depth information about Next.js features and API.</p>
@@ -49,7 +72,7 @@ export default function Home() {
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
           </a>
-        </div>
+        </div> */}
       </main>
 
       <footer className={styles.footer}>
