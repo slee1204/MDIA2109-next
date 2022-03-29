@@ -22,7 +22,7 @@ export default function Home() {
       <ImgCard 
         bg="#FDE8CA"
         tcl="#DAD">
-          <h3>Hi Im children</h3>
+          <h3>I love myself</h3>
           Yay
           <hr />
           WooHoo!
